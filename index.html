@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Ruang Sunyi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BACKGROUND */
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2, #ff9a9e);
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* ANIMASI BG */
+@keyframes gradientMove {
+    0% { background-position: 0% }
+    50% { background-position: 100% }
+    100% { background-position: 0% }
+}
+
+/* CONTAINER */
+.container {
+    text-align: center;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    animation: fadeIn 1.2s ease;
+}
+
+/* JUDUL */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+}
+
+/* PARAGRAF */
+p {
+    margin-top: 15px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* BUTTON */
+button {
+    margin-top: 25px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ffd6a5, #ff9a9e);
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ISI */
+#isi {
+    display: none;
+    margin-top: 20px;
+    animation: fadeUp 1s ease;
+}
+
+/* ANIMASI */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* WATERMARK */
+.watermark {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Ruang Sunyi</h1>
+
+<p>
+Kadang, hati hanya butuh tempat untuk beristirahat.  
+Bukan sekadar diam, tapi ruang untuk kembali memahami.
+</p>
+
+<button onclick="mulai()">Mulai</button>
+
+<div id="isi">
+<p>
+Di sini, kamu bebas menulis apa pun yang tak sempat terucap.  
+Tentang rindu yang diam-diam tumbuh,  
+atau luka yang belum sempat sembuh.
+<br><br>
+Tak perlu kata yang sempurna, cukup jujur, cukup kamu.  
+Karena setiap rasa, sekecil apa pun, tetap berharga.
+<br><br>
+Dan tanpa perlu diumumkan, ada rasa bangga dalam setiap langkah yang tetap berjalan.
+</p>
+</div>
+
+</div>
+
+<div class="watermark">
+by nazwaalyasavira
+</div>
+
+<script>
+function mulai() {
+    document.getElementById("isi").style.display = "block";
+}
+</script>
+
+</body>
+</html>
